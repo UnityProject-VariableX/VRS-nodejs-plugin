@@ -5,16 +5,27 @@ var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 
 var data = {
-	"name":"maunil",
-	"data":"0,0,0"
+	"data":"0"
 	};
-
+var data2={
+	"name":"Sasuke",
+	"data":"1,1,1"
+	};;
 io.on("connection",function(socket){
 	socket.on("disconnect",function(){
 		//flag=false;
+		data.data=0;
 		console.log("user disconneted");
 	});
-	socket.emit("datarec",data);
+	for(var i=0; i<50;i++){
+		data.data=Number(data.data)+3+"";
+		if(Number(data.data)<10)
+			data.data="00"+data.data;
+		else if(Number(data.data)<100)
+			data.data="0"+data.data;
+		socket.emit("datarec",data);
+		//socket.emit("datarec",data2);
+	}
 	console.log('a user connected');
 	/*var flag=1;
 	function sendData(data){
