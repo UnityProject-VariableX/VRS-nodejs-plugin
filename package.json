@@ -1,0 +1,15 @@
+{
+  "name": "vrnodeplugin",
+  "version": "1.0.0",
+  "description": "this is node js server to connect unity and Rpi and sending data from raspberry pi to unity3d game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "maunil_swadas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^1.4.8"
+  }
+}
