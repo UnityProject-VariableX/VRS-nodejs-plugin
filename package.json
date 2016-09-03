@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
+    "i2c-bus": "^1.1.1",
+    "i2c-mpu6050": "^2.2.1",
     "keypress": "^0.2.1",
     "socket.io": "^1.4.8"
   }
